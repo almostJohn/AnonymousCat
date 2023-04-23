@@ -18,7 +18,7 @@
 	"type": "module",
 	"keywords": [],
 	"author": "almostJohn <garcia.johngale@gmail.com>",
-	"license": "MIT",
+	"license": "AGPL-3.0",
 	"dependencies": {
 		"@almostjohn/pretty-framework": "^2.2.1",
 		"@discordjs/rest": "^1.7.0",
