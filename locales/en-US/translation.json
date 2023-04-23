@@ -1,0 +1,7 @@
+{
+	"common": {
+		"errors": {
+			"no_log_channel": "No log channel has been initialized yet"
+		}
+	}
+}

@@ -1,0 +1,48 @@
+{
+	"name": "anonymous-cat",
+	"version": "1.0.0",
+	"description": "",
+	"scripts": {
+		"build:clean": "del-cli dist",
+		"build:check": "tsc",
+		"build:copy-locales": "cpy locales/ dist/",
+		"build": "npm run build:clean && npm run build:check && npm run build:copy-locales",
+		"lint": "prettier --check . && cross-env TIMING=1 eslint src --ext ts --format=pretty",
+		"format": "prettier --check . && cross-env TIMING=1 eslint src --ext ts --format=pretty",
+		"fmt": "npm run format",
+		"start": "env-cmd node --enable-source-maps dist/index.js",
+		"start:dev": "npm run build && npm run dev",
+		"dev": "env-cmd node --enable-source-maps dist/index.js",
+		"deploy:commands": "env-cmd node --enable-source-maps dist/deploy.js"
+	},
+	"type": "module",
+	"keywords": [],
+	"author": "almostJohn <garcia.johngale@gmail.com>",
+	"license": "MIT",
+	"dependencies": {
+		"@almostjohn/pretty-framework": "^2.2.1",
+		"@discordjs/rest": "^1.7.0",
+		"@skyra/i18next-backend": "^2.0.3",
+		"discord-api-types": "^0.37.39",
+		"discord.js": "^14.9.0",
+		"env-cmd": "^10.1.0",
+		"i18next": "^22.4.15",
+		"ioredis": "^5.3.2",
+		"postgres": "^3.3.4",
+		"readdirp": "^3.6.0",
+		"reflect-metadata": "^0.1.13",
+		"tsyringe": "^4.7.0"
+	},
+	"devDependencies": {
+		"@types/node": "^18.16.0",
+		"cpy-cli": "^4.2.0",
+		"cross-env": "^7.0.3",
+		"del-cli": "^5.0.0",
+		"eslint": "^8.39.0",
+		"prettier": "^2.8.8",
+		"typescript": "^5.0.4"
+	},
+	"engines": {
+		"node": ">=16.0.0"
+	}
+}
