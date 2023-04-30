@@ -1,7 +1,46 @@
 {
 	"common": {
 		"errors": {
-			"no_log_channel": "No log channel has been initialized yet"
+			"generic": "Something went wrong!",
+			"no_log_channel": "No log channel has been initialized yet!",
+			"timed_out": "Action timer ran out!"
+		},
+		"status": "your confessions",
+		"buttons": {
+			"cancel": "Cancel"
+		}
+	},
+	"command": {
+		"main": {
+			"confess": {
+				"pending": "Do you really want to compose this anonymous message?",
+				"buttons": {
+					"execute": "Compose"
+				},
+				"cancel": "Canceled composing anonymous message.",
+				"success": "Successfully composed anonymous message."
+			},
+			"ping": {
+				"success": "ok"
+			},
+			"setup": {
+				"errors": {
+					"missing_permissions": "Missing permissions to setup AnonymousCat!"
+				},
+				"pending": "You are about to set AnonymousCat in this server. Are you sure?",
+				"buttons": {
+					"execute": "Set"
+				},
+				"cancel": "Canceled setting up this server.",
+				"success": "Setup is completely successfull."
+			}
+		}
+	},
+	"logging": {
+		"confession": {
+			"title": "Confession",
+			"description": "{{- msg}}",
+			"footer": "Confession #{{- confess_id}}"
 		}
 	}
 }

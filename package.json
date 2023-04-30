@@ -1,6 +1,6 @@
 {
 	"name": "anonymous-cat",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"description": "",
 	"scripts": {
 		"build:clean": "del-cli dist",
@@ -28,6 +28,7 @@
 		"env-cmd": "^10.1.0",
 		"i18next": "^22.4.15",
 		"ioredis": "^5.3.2",
+		"nanoid": "^4.0.2",
 		"postgres": "^3.3.4",
 		"readdirp": "^3.6.0",
 		"reflect-metadata": "^0.1.13",
@@ -40,6 +41,7 @@
 		"del-cli": "^5.0.0",
 		"eslint": "^8.39.0",
 		"prettier": "^2.8.8",
+		"type-fest": "^3.9.0",
 		"typescript": "^5.0.4"
 	},
 	"engines": {

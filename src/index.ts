@@ -16,34 +16,16 @@ import {
 	logger,
 	commandInfo,
 } from "@almostjohn/pretty-framework";
-import { GatewayIntentBits, Options, Partials, PresenceUpdateStatus, ActivityType } from "discord.js";
+import { GatewayIntentBits, Options, Partials } from "discord.js";
 import readdirp from "readdirp";
 
 await createPostgres();
 await createRedis();
 
 const client = createClient({
-	intents: [
-		GatewayIntentBits.Guilds,
-		GatewayIntentBits.GuildMembers,
-		GatewayIntentBits.GuildMessages,
-		GatewayIntentBits.MessageContent,
-	],
-	partials: [Partials.Channel, Partials.GuildMember, Partials.Message, Partials.User],
-	makeCache: Options.cacheWithLimits({
-		MessageManager: 100,
-		StageInstanceManager: 10,
-		VoiceStateManager: 10,
-	}),
-	presence: {
-		status: PresenceUpdateStatus.DoNotDisturb,
-		activities: [
-			{
-				name: "your confessions",
-				type: ActivityType.Listening,
-			},
-		],
-	},
+	intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages],
+	partials: [Partials.Channel, Partials.Message],
+	makeCache: Options.cacheWithLimits({ MessageManager: 100 }),
 });
 
 createCommands();
