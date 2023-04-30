@@ -15,7 +15,7 @@ import { nanoid } from "nanoid";
 import { getGuildSetting, SettingsKeys } from "../../functions/settings/getGuildSetting.js";
 import { upsertConfessionMessage } from "../../functions/logging/upsertConfessionMessage.js";
 
-export default class extends Command<typeof Command> {
+export default class extends Command<typeof ConfessCommand> {
 	public override async chatInput(
 		interaction: InteractionParam,
 		args: ArgsParam<typeof ConfessCommand>,
