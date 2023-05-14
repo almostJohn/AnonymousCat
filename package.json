@@ -1,6 +1,6 @@
 {
 	"name": "anonymous-cat",
-	"version": "2.0.0",
+	"version": "2.0.1",
 	"description": "",
 	"scripts": {
 		"build:clean": "del-cli dist",
@@ -20,7 +20,7 @@
 	"author": "almostJohn <garcia.johngale@gmail.com>",
 	"license": "AGPL-3.0",
 	"dependencies": {
-		"@almostjohn/pretty-framework": "^2.2.1",
+		"@almostjohn/pretty-framework": "^2.3.2",
 		"@discordjs/rest": "^1.7.0",
 		"@skyra/i18next-backend": "^2.0.3",
 		"discord-api-types": "^0.37.39",

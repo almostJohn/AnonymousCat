@@ -22,7 +22,7 @@ export async function upsertConfessionMessage(guild: Guild, message: string) {
 		...embed,
 		footer: {
 			text: i18next.t("logging.confession.footer", {
-				confess_id: newCount,
+				confess_num: newCount,
 				lng: locale,
 			}),
 		},

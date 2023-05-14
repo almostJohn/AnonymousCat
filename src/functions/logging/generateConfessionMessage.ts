@@ -1,4 +1,4 @@
-import { truncateEmbed } from "@almostjohn/pretty-framework";
+import { truncateEmbed, ColorStyle } from "@almostjohn/pretty-framework";
 import i18next from "i18next";
 
 export function generateConfessionMessage(message: string, locale: string) {
@@ -8,7 +8,7 @@ export function generateConfessionMessage(message: string, locale: string) {
 			msg: message,
 			lng: locale,
 		})!,
-		color: 5793266,
+		color: ColorStyle.Blurple,
 		timestamp: new Date().toISOString(),
 	});
 }

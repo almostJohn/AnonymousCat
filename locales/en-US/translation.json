@@ -40,7 +40,7 @@
 		"confession": {
 			"title": "Confession",
 			"description": "{{- msg}}",
-			"footer": "Confession #{{- confess_id}}"
+			"footer": "Confession #{{- confess_num}}"
 		}
 	}
 }
